@@ -1,5 +1,5 @@
-price = int(input("料金を入力"))
-number = int(input("人数を入力"))
+weight = int(input("体重(kg)を入力"))
+height = float(input("身長(m)を入力"))
 
-payment = int(price / number)
-print("お支払いは{}円です".format(payment))
+bmi = weight / height / height
+print("BMIは{}です".format(bmi))
