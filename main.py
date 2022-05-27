@@ -1,6 +1,10 @@
-number = int(input("数字を入力してください"))
+aisatu = input("あいさつしてください")
 
-if number % 2 == 0:
-    print("偶数です")
+if aisatu == "こんにちは":
+    print("ようこそ！")
+elif aisatu == "景気は？":
+    print("ボチボチです")
+elif aisatu == "さようなら":
+    print("お元気で！")
 else:
-    print("奇数です")
+    print("どうしました？")
