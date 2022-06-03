@@ -1,10 +1,12 @@
-aisatu = input("あいさつしてください")
+count = 1
+ans = True
+print("カレーを召し上がれ")
 
-if aisatu == "こんにちは":
-    print("ようこそ！")
-elif aisatu == "景気は？":
-    print("ボチボチです")
-elif aisatu == "さようなら":
-    print("お元気で！")
-else:
-    print("どうしました？")
+while ans == True:
+    print('{}皿のカレーを食べました'.format(count))
+    key = input("おかわりはいかがですか？（y/n）>>")
+    if key == "y":
+        count += 1
+    else:
+        ans = False
+print("ごちそうさまでした")
