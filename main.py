@@ -1,12 +1,3 @@
-count = 1
-ans = True
-print("カレーを召し上がれ")
-
-while ans == True:
-    print('{}皿のカレーを食べました'.format(count))
-    key = input("おかわりはいかがですか？（y/n）>>")
-    if key == "y":
-        count += 1
-    else:
-        ans = False
-print("ごちそうさまでした")
+for i in range(9):
+    for j in range(9):
+        print("{}×{}={}" .format(i+1, j+1, (i+1)*(j+1)))
