@@ -1,6 +1,3 @@
-ratios = list()
-for count in range(len(numbers)):
-    if count == len(numbers) - 1
-        break
-    ratios.append(numbers[count+1] / numbers[count])
-print(ratios)
+for count in range(len(ratios)):
+    ratios[count] = int(ratios[count] * 1000) / 1000
+print()    
