@@ -1,8 +1,6 @@
-numbers = [1, 1]
-date = sum(numbers)
-count = 2
-while date <= 1000:
-    numbers.append(date)
-    date = date + numbers[count-1]
-    count += 1
-print(numbers)
+ratios = list()
+for count in range(len(numbers)):
+    if count == len(numbers) - 1
+        break
+    ratios.append(numbers[count+1] / numbers[count])
+print(ratios)
