@@ -1,9 +1,11 @@
-x = ['ABC']
-y = [input('>>')]
+def welcome(u):
+    print('ようこそ{}さん' .format(u['name']))
+    u['age'] = u['age'] + 1
+    print('あなたは来年{}歳だから大吉です！' .format(u['age']))
 
-print(x[0] == y[0])
-print(id(x[0]) == id(y[0]))
-
-y = x
-y[0] = 'XYZ'
-print(x[0])
+username = input('名前を入力してください>>')
+userage = int(input('年齢を入力してください>>'))
+user = {'name': username, 'age': userage}
+copied_user = user.copy()
+welcome(copied_user)
+print('{}歳の{}さん、またプレイしてくださいね' .format(user['age'], user['name']))
