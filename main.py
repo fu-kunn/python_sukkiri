@@ -1,5 +1,4 @@
-nums = list()
-for n in range(3):
-    date = int(input('{}個目の整数を入力してください>>' .format(n+1)))
-    nums.append(date)
-print(max(nums))    
+pi = 3.141519
+print(round(pi))
+for n in range(4):
+    print(round(pi, n + 1))
