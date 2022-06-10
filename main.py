@@ -1,6 +1,37 @@
-file_r = open('sample.txt', 'r')
-file_w = open('copy.txt', 'w')
-for line in file_r:
-    file_w.write(line)
-file_r.close()
-file_w.close()
+#randomモジュールのrandint関数を取り込む
+from random import randint
+print('数当てゲームを始めます。3桁の数を当ててください！')
+
+answer = list()
+for n in range(3):
+    answer.append(randint(0, 9))
+
+is_continue = True
+while is_continue == True:
+    # 予想の入力
+    prediction = list()
+    for n in range(3):
+        date = int(input('{}桁目の予想を入力（0〜9）>>' .format(n + 1)))
+        prediction.append(date)
+
+
+    # 答え合わせ
+    hit = 0
+    blow = 0
+    for n in range(3):
+        if prediction[n] == answer[n]:
+            hit += 1
+        else:
+            for m in range(3):
+                if prediction[n] == answer[m] and n != m:
+                    blow += 1
+
+    # 結果発表
+    print('{}ヒット！{}ボール！' .format(hit, blow))
+    if hit == 3:
+        print('正解です！')
+        is_continue = False
+    else:
+        if int(input('続けますか？ 1:続ける 2:終了 >>')) == 2:
+            print('正解は{}{}{}でした' .format(answer[0], answer[1], answer[2]))
+            is_continue = False
