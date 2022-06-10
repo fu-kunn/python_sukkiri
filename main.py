@@ -1,11 +1,5 @@
-def welcome(u):
-    print('ようこそ{}さん' .format(u['name']))
-    u['age'] = u['age'] + 1
-    print('あなたは来年{}歳だから大吉です！' .format(u['age']))
-
-username = input('名前を入力してください>>')
-userage = int(input('年齢を入力してください>>'))
-user = {'name': username, 'age': userage}
-copied_user = user.copy()
-welcome(copied_user)
-print('{}歳の{}さん、またプレイしてくださいね' .format(user['age'], user['name']))
+nums = list()
+for n in range(3):
+    date = int(input('{}個目の整数を入力してください>>' .format(n+1)))
+    nums.append(date)
+print(max(nums))    
